@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { calculateWinner } from "../helpers";
 import Board from "./Board";
 
-const styles = {
-  width: "200px",
-  margin: "20px auto"
-};
+import "./Game.css";
 
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
