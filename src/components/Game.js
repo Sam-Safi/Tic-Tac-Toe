@@ -40,14 +40,16 @@ const Game = () => {
 
   return (
     <>
-      <Board squares={history[stepNumber]} onClick={handleClick} />
-      <div style={styles}>
-        <p>
-          {winner
-            ? "Winner: " + winner
-            : "Next Player: " + (xIsNext ? "X" : "O")}
-        </p>
-        {renderMoves()}
+      <div className="game">
+        <Board squares={history[stepNumber]} onClick={handleClick} />
+        <div className="game__details">
+          <p className="game__turn">
+            {winner
+              ? "Winner: " + winner
+              : "Next Player: " + (xIsNext ? "X" : "O")}
+          </p>
+          {renderMoves()}
+        </div>
       </div>
     </>
   );
